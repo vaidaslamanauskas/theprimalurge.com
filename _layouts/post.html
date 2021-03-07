@@ -1,0 +1,464 @@
+---
+layout: default
+---
+
+<main class="Main  Main--full" role="main" id="main">
+  <div id="deviceOverlaySelector" class="AboveTheFold">
+
+    {% if page.bravoJuliett == true %}
+    <div id="deviceOverlayToggle" class="Switcher"></div>
+    {% else %}
+    {% endif %}
+
+    <a href="{{ page.websiteUrl }}?utm_source=theprimalurge" target="_blank" class="AboveTheFold-goOut">
+      <span class="AboveTheFold-goOutText">Visit</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0v2h2v2h2v2h-2v2h-2v2h-2v2H8v2H6v4h4v-2h2v-2h2v-2h2v-2h2V8h2v2h2v2h2V0z"/><path d="M20 20H4V4h4V0H2v2H0v20h2v2h20v-2h2v-6h-4z"/></svg>
+    </a>
+
+    {% if page.bravoJuliett == true %}
+    <div class="DeviceContainer">
+
+      <!-- Overlay to block iframe interactivity -->
+      <div class="Device-overlay"></div>
+
+      <div class="DeviceList">
+
+        <div class="DeviceList-window">
+          <div class="DeviceList-frame">
+            <iframe src="{{ page.websiteUrl }}" tabindex="-1" sandbox="allow-scripts"></iframe>
+          </div>
+        </div>
+
+        <div class="DeviceList-tablet">
+          <div class="DeviceList-frame">
+            <iframe src="{{ page.websiteUrl }}" tabindex="-1" sandbox="allow-scripts"></iframe>
+          </div>
+        </div>
+
+        <div class="DeviceList-handset">
+          <div class="DeviceList-frame">
+            <iframe src="{{ page.websiteUrl }}" tabindex="-1" sandbox="allow-scripts"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    {% else %}
+
+    <!-- Bravo Juliett -->
+    <div class="Bravo" style="background-image: url('{{ page.bravoRomeo }}')"></div>
+
+    <!-- Bravo Juliett explainer for joiners -->
+    <div class="Juliett">
+      <p class="Juliett-message">Website doesn't play well with iframes. So we use joiners to translate some kind of feel.</p>
+    </div>
+
+    {% endif %}
+
+    {% if page.bravoJuliett == true %}
+
+    <!-- Bravo Juliett explainer for iframes -->
+    <div class="Juliett">
+      <p class="Juliett-message">Website plays well with iframes. So we can offer You some interactivity.</p>
+    </div>
+
+    <div class="Device-replacement">
+      <img src="{{ page.websiteScreen }}" alt="Screenshot">
+    </div>
+
+    {% else %}
+    {% endif %}
+  </div>
+
+
+
+  <div class="West">
+    <div class="West-major">
+
+      <div class="Nasa  Nasa--narrow">
+
+        <h1 class="Nasa-title">{{ page.title }}</h1>
+
+        <div class="Author">
+          <div class="Author-image" style="background-image: url('{{ page.authorAvatar }}')"></div>
+
+          <div class="Author-details">
+            <h3 class="Author-detailsName">{{ page.authorName }}</h3>
+            <p class="Author-detailsBio">{{ page.authorBio }}</p>
+            <span class="Author-detailsExternal">
+              {% if page.authorSite %}
+                <a href="{{ page.authorSite }}" target="_blank" class="Author-detailsExternalLink">Website</a>
+              {% endif %}
+
+              {% if page.authorTwitter %}
+                <a href="https://twitter.com/{{ page.authorTwitter }}" target="_blank" class="Author-detailsExternalLink  Author-detailsExternalLink--twitter">Twitter</a>
+              {% endif %}
+
+              {% if page.authorGithub %}
+                <a href="https://github.com/{{ page.authorGithub }}" target="_blank" class="Author-detailsExternalLink  Author-detailsExternalLink--github">GitHub</a>
+              {% endif %}
+
+              {% if page.authorCodepen %}
+                <a href="https://codepen.io/{{ page.authorCodepen }}" target="_blank" class="Author-detailsExternalLink  Author-detailsExternalLink--codepen">CodePen</a>
+              {% endif %}
+
+              {% if page.authorGoogle %}
+                <a href="https://plus.google.com/+{{ page.authorGoogle }}" target="_blank" class="Author-detailsExternalLink  Author-detailsExternalLink--google">Google+</a>
+              {% endif %}
+
+              {% if page.authorFacebook %}
+                <a href="https://www.facebook.com/{{ page.authorFacebook }}" target="_blank" class="Author-detailsExternalLink  Author-detailsExternalLink--facebook">Facebook</a>
+              {% endif %}
+
+              {% if page.authorDribbble %}
+                <a href="https://dribbble.com/{{ page.authorDribbble }}" target="_blank" class="Author-detailsExternalLink  Author-detailsExternalLink--dribbble">Dribbble</a>
+              {% endif %}
+
+              {% if page.authorMedium %}
+                <a href="https://medium.com/@{{ page.authorMedium }}" target="_blank" class="Author-detailsExternalLink  Author-detailsExternalLink--medium">Medium</a>
+              {% endif %}
+
+              {% if page.authorInstagram %}
+                <a href="https://www.instagram.com/{{ page.authorInstagram }}" target="_blank" class="Author-detailsExternalLink  Author-detailsExternalLink--instagram">Instagram</a>
+              {% endif %}
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Used for agency type sites -->
+        {% if page.authorFriends %}
+        <div class="Friends">
+          <p class="Friends-cast"><span>w/ </span>{{ page.authorFriends }}</p>
+        </div>
+        {% endif %}
+
+        {% if page.authorMoreFriends %}
+        <div class="Friends">
+          <p class="Friends-cast"><span>w/ </span><a href="{{ page.authorMoreFriends }}" target="_blank">Awesome people behind this site</a></p>
+        </div>
+        {% endif %}
+
+      </div>
+
+      <!-- FBI -->
+      <div class="Nasa  Nasa--narrow">
+        <div class="Fbi">
+
+          <div class="Fbi-badCop">
+            <div class="Fbi-interrogation">
+              <p class="Fbi-interrogationTalk">{{ page.badCop }}</p>
+            </div>
+
+            <div class="Fbi-copId">
+              <h1 class="Fbi-copIdName">Alonzo</h1>
+              <span class="Fbi-copIdPersonality">Bad <span>[Negative]</span> Cop</span>
+            </div>
+          </div>
+
+          <div class="Fbi-goodCop">
+            <div class="Fbi-interrogation">
+              <p class="Fbi-interrogationTalk">{{ page.goodCop }}</p>
+            </div>
+
+            <div class="Fbi-copId">
+              <h1 class="Fbi-copIdName">Adam</h1>
+              <span class="Fbi-copIdPersonality">Good <span>[Positive]</span> Cop</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Social bit -->
+      <div class="Nasa  Nasa--narrow">
+        <div class="PiedPiper">
+          <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via=theprimalurge" target="_blank" rel="nofollow" class="PiedPiper-pipe">Tweet <span>it</span></a>
+
+          <span class="PiedPiper-valve">and / or</span>
+
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&t={{ page-title }}" target="_blank" class="PiedPiper-pipe">Share <span>on Facebook</span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="West-minor">
+
+      <!-- Pagani Engine -->
+      <div class="Nasa">
+        <div class="Pagani">
+
+          <div class="Pagani-bonnet">
+            <div class="Pagani-bonnetEngine
+              {% if page.enginePowerArtDirection == "5" %} Pagani-bonnetEngine--powerFive {% endif %}
+              {% if page.enginePowerArtDirection == "4.5" %} Pagani-bonnetEngine--powerFourHalf {% endif %}
+              {% if page.enginePowerArtDirection == "4" %} Pagani-bonnetEngine--powerFour {% endif %}
+              {% if page.enginePowerArtDirection == "3.5" %} Pagani-bonnetEngine--powerThreeHalf {% endif %}
+              {% if page.enginePowerArtDirection == "3" %} Pagani-bonnetEngine--powerThree {% endif %}
+              {% if page.enginePowerArtDirection == "2.5" %} Pagani-bonnetEngine--powerTwoHalf {% endif %}
+              {% if page.enginePowerArtDirection == "2" %} Pagani-bonnetEngine--powerTwo {% endif %}
+              {% if page.enginePowerArtDirection == "1.5" %} Pagani-bonnetEngine--powerOneHalf {% endif %}
+              {% if page.enginePowerArtDirection == "1" %} Pagani-bonnetEngine--powerOne {% endif %}
+              {% if page.enginePowerArtDirection == "0.5" %} Pagani-bonnetEngine--powerNullHalf {% endif %}
+              {% if page.enginePowerArtDirection == "0" %} Pagani-bonnetEngine--powerNull {% endif %}
+            ">
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+            </div>
+
+            <div class="Pagani-bonnetEngine
+              {% if page.enginePowerPerformance == "5" %} Pagani-bonnetEngine--powerFive {% endif %}
+              {% if page.enginePowerPerformance == "4.5" %} Pagani-bonnetEngine--powerFourHalf {% endif %}
+              {% if page.enginePowerPerformance == "4" %} Pagani-bonnetEngine--powerFour {% endif %}
+              {% if page.enginePowerPerformance == "3.5" %} Pagani-bonnetEngine--powerThreeHalf {% endif %}
+              {% if page.enginePowerPerformance == "3" %} Pagani-bonnetEngine--powerThree {% endif %}
+              {% if page.enginePowerPerformance == "2.5" %} Pagani-bonnetEngine--powerTwoHalf {% endif %}
+              {% if page.enginePowerPerformance == "2" %} Pagani-bonnetEngine--powerTwo {% endif %}
+              {% if page.enginePowerPerformance == "1.5" %} Pagani-bonnetEngine--powerOneHalf {% endif %}
+              {% if page.enginePowerPerformance == "1" %} Pagani-bonnetEngine--powerOne {% endif %}
+              {% if page.enginePowerPerformance == "0.5" %} Pagani-bonnetEngine--powerNullHalf {% endif %}
+              {% if page.enginePowerPerformance == "0" %} Pagani-bonnetEngine--powerNull {% endif %}
+            ">
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+            </div>
+
+            <div class="Pagani-bonnetEngine
+              {% if page.enginePowerA11y == "5" %} Pagani-bonnetEngine--powerFive {% endif %}
+              {% if page.enginePowerA11y == "4.5" %} Pagani-bonnetEngine--powerFourHalf {% endif %}
+              {% if page.enginePowerA11y == "4" %} Pagani-bonnetEngine--powerFour {% endif %}
+              {% if page.enginePowerA11y == "3.5" %} Pagani-bonnetEngine--powerThreeHalf {% endif %}
+              {% if page.enginePowerA11y == "3" %} Pagani-bonnetEngine--powerThree {% endif %}
+              {% if page.enginePowerA11y == "2.5" %} Pagani-bonnetEngine--powerTwoHalf {% endif %}
+              {% if page.enginePowerA11y == "2" %} Pagani-bonnetEngine--powerTwo {% endif %}
+              {% if page.enginePowerA11y == "1.5" %} Pagani-bonnetEngine--powerOneHalf {% endif %}
+              {% if page.enginePowerA11y == "1" %} Pagani-bonnetEngine--powerOne {% endif %}
+              {% if page.enginePowerA11y == "0.5" %} Pagani-bonnetEngine--powerNullHalf {% endif %}
+              {% if page.enginePowerA11y == "0" %} Pagani-bonnetEngine--powerNull {% endif %}
+            ">
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+            </div>
+
+            <div class="Pagani-bonnetEngine
+              {% if page.enginePowerPwa == "5" %} Pagani-bonnetEngine--powerFive {% endif %}
+              {% if page.enginePowerPwa == "4.5" %} Pagani-bonnetEngine--powerFourHalf {% endif %}
+              {% if page.enginePowerPwa == "4" %} Pagani-bonnetEngine--powerFour {% endif %}
+              {% if page.enginePowerPwa == "3.5" %} Pagani-bonnetEngine--powerThreeHalf {% endif %}
+              {% if page.enginePowerPwa == "3" %} Pagani-bonnetEngine--powerThree {% endif %}
+              {% if page.enginePowerPwa == "2.5" %} Pagani-bonnetEngine--powerTwoHalf {% endif %}
+              {% if page.enginePowerPwa == "2" %} Pagani-bonnetEngine--powerTwo {% endif %}
+              {% if page.enginePowerPwa == "1.5" %} Pagani-bonnetEngine--powerOneHalf {% endif %}
+              {% if page.enginePowerPwa == "1" %} Pagani-bonnetEngine--powerOne {% endif %}
+              {% if page.enginePowerPwa == "0.5" %} Pagani-bonnetEngine--powerNullHalf {% endif %}
+              {% if page.enginePowerPwa == "0" %} Pagani-bonnetEngine--powerNull {% endif %}
+            ">
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+            </div>
+
+            <div class="Pagani-bonnetEngine
+              {% if page.enginePowerEditor == "5" %} Pagani-bonnetEngine--powerFive {% endif %}
+              {% if page.enginePowerEditor == "4.5" %} Pagani-bonnetEngine--powerFourHalf {% endif %}
+              {% if page.enginePowerEditor == "4" %} Pagani-bonnetEngine--powerFour {% endif %}
+              {% if page.enginePowerEditor == "3.5" %} Pagani-bonnetEngine--powerThreeHalf {% endif %}
+              {% if page.enginePowerEditor == "3" %} Pagani-bonnetEngine--powerThree {% endif %}
+              {% if page.enginePowerEditor == "2.5" %} Pagani-bonnetEngine--powerTwoHalf {% endif %}
+              {% if page.enginePowerEditor == "2" %} Pagani-bonnetEngine--powerTwo {% endif %}
+              {% if page.enginePowerEditor == "1.5" %} Pagani-bonnetEngine--powerOneHalf {% endif %}
+              {% if page.enginePowerEditor == "1" %} Pagani-bonnetEngine--powerOne {% endif %}
+              {% if page.enginePowerEditor == "0.5" %} Pagani-bonnetEngine--powerNullHalf {% endif %}
+              {% if page.enginePowerEditor == "0" %} Pagani-bonnetEngine--powerNull {% endif %}
+            ">
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+              <span class="Pagani-bonnetEnginePiston"></span>
+            </div>
+          </div>
+
+          <ul class="Pagani-dashboard">
+            <li class="Pagani-dashboardDial">
+              {% include _svg/potion--charizard.html %}
+            </li>
+
+            <li class="Pagani-dashboardDial">
+              {% include _svg/potion--pikachu.html %}
+            </li>
+
+            <li class="Pagani-dashboardDial">
+              {% include _svg/potion--ivysaur.html %}
+            </li>
+
+            <li class="Pagani-dashboardDial">
+              {% include _svg/potion--squirtle.html %}
+            </li>
+
+            <li class="Pagani-dashboardDial">
+              {% include _svg/potion--butterfree.html %}
+            </li>
+          </ul>
+
+        </div>
+
+        <span class="Nasa-separator"></span>
+
+        <ul class="Potion">
+
+          <li class="Potion-recipe">
+            <div class="Potion-recipeGem"></div>
+            <div class="Potion-recipeDirections">
+              <h4 class="Potion-recipeDirectionsLabel">Amortentia<span> [ Art Direction ]</span></h4>
+              <p class="Potion-recipeDirectionsDescription">Overall feel of the site. Emotions, message, composition. It is how well can we define our gut feeling when using the website.</p>
+            </div>
+          </li>
+
+          <li class="Potion-recipe">
+            <div class="Potion-recipeGem"></div>
+            <div class="Potion-recipeDirections">
+              <h4 class="Potion-recipeDirectionsLabel">Pepperup Potion<span> [ Performance ]</span></h4>
+              <p class="Potion-recipeDirectionsDescription">Important topic & issue. We are currently focused on load times & sizes. Yet not overlooking scrolling & animations.</p>
+            </div>
+          </li>
+
+          <li class="Potion-recipe">
+            <div class="Potion-recipeGem"></div>
+            <div class="Potion-recipeDirections">
+              <h4 class="Potion-recipeDirectionsLabel">Draught of Peace<span> [ A11y ]</span></h4>
+              <p class="Potion-recipeDirectionsDescription">Our 'expert' is on a holiday in California. Shitty reason, but thats why we are only covering the basics.</p>
+            </div>
+          </li>
+
+          <li class="Potion-recipe">
+            <div class="Potion-recipeGem"></div>
+            <div class="Potion-recipeDirections">
+              <h4 class="Potion-recipeDirectionsLabel">Felix Felicis<span> [ Progressiveness ]</span></h4>
+              <p class="Potion-recipeDirectionsDescription">Progressive web app'y things. Offline support, service workers, push notifications and other fancy wizardry stuff.</p>
+            </div>
+          </li>
+
+          <li class="Potion-recipe">
+            <div class="Potion-recipeGem"></div>
+            <div class="Potion-recipeDirections">
+              <h4 class="Potion-recipeDirectionsLabel">Wolfsbane<span> [ Editorial ]</span></h4> <!-- reliant robin -->
+              <p class="Potion-recipeDirectionsDescription">Subjective opinion from the Editor.</p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- Joe -->
+      <div class="Nasa">
+        <div class="Marvel">
+          <h1 class="Marvel-thor">Important notice.</h1>
+          <p class="Marvel-blackWidow">It is really difficult to judge web design. We consider every picked website very good if not often great. Rating system is made to set perspective among the sites you'll find here. Also, to have some fun & practise. Don't take it too seriously.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="Aviato">
+    <div class="Aviato-investor">
+
+      {% if page.next.url %}
+      <section class="Kanye">
+
+        <header class="Kanye-header">
+          <div class="Kanye-headerVerse">
+            <h1 class="Kanye-headerTitle">{{ page.next.title }}</h1>
+            <time class="Kanye-headerTime" datetime="{{ page.next.date | date: "%-d %B, %Y" }}">{{ page.next.date | date: "%-d %B, %Y" }}</time>
+          </div>
+          <div class="Kanye-headerAction">
+            <a href="{{ page.next.url }}" class="Kanye-headerActionLink">
+              See specimen
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 6V2h-4V0H6v2H2v4H0v12h2v4h4v2h12v-2h4v-4h2V6h-2zM10 4h4v4h-4V4zm6 16H8v-2h2v-6H8v-2h6v8h2v2z"/></svg>
+            </a>
+          </div>
+        </header>
+
+      </section>
+      {% endif %}
+
+    </div>
+
+    <div class="Aviato-investor">
+      <div class="Aviato-investorMid">
+        {% if page.next.url %}
+        <span class="Aviato-investorBighead">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M6 14v2h2v2h2v2h2v2h2v2h2v-2h2v-2h-2v-2h-2v-2h-2v-2h-2v-4h2V8h2V6h2V4h2V2h-2V0h-2v2h-2v2h-2v2H8v2H6v2H4v4z"/></svg>
+        Next</span>
+        {% else %}
+        <span class="Aviato-investorBighead">No more that way</span>
+        {% endif %}
+
+        {% if page.previous.url %}
+        <span class="Aviato-investorBighead">Previous
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M18 10V8h-2V6h-2V4h-2V2h-2V0H8v2H6v2h2v2h2v2h2v2h2v4h-2v2h-2v2H8v2H6v2h2v2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-4z"/></svg>
+        </span>
+        {% else %}
+        <span class="Aviato-investorBighead">No more that way</span>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="Aviato-investor">
+
+      {% if page.previous.url %}
+      <section class="Kanye">
+
+        <header class="Kanye-header">
+          <div class="Kanye-headerVerse">
+            <h1 class="Kanye-headerTitle">{{ page.previous.title }}</h1>
+            <time class="Kanye-headerTime" datetime="{{ page.previous.date | date: "%-d %B, %Y" }}">{{ page.previous.date | date: "%-d %B, %Y" }}</time>
+          </div>
+          <div class="Kanye-headerAction">
+            <a href="{{ page.previous.url }}" class="Kanye-headerActionLink">
+              See specimen
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 6V2h-4V0H6v2H2v4H0v12h2v4h4v2h12v-2h4v-4h2V6h-2zM10 4h4v4h-4V4zm6 16H8v-2h2v-6H8v-2h6v8h2v2z"/></svg>
+            </a>
+          </div>
+        </header>
+
+      </section>
+      {% endif %}
+
+    </div>
+  </div>
+
+
+
+  {% include drawer.html %}
+
+
+
+</main>
+
+<script type="text/javascript">
+  var deviceOverlaySelector = document.getElementById('deviceOverlaySelector');
+  var deviceOverlayToggle = document.getElementById('deviceOverlayToggle');
+  deviceOverlaySelector.classList.add('is-notInteractive');
+  function toggleSwitch() {
+    deviceOverlaySelector.classList.toggle('is-notInteractive'),
+    deviceOverlaySelector.classList.toggle('is-selected');
+  }
+  deviceOverlayToggle.addEventListener('click', toggleSwitch);
+</script>

@@ -1,0 +1,107 @@
+.Pokemon {
+  position: relative;
+  display: block;
+
+  padding-top: 16.6666vh;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  width: 100%;
+
+  background: black;
+  border: 1px solid white;
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    border: 2px solid white;
+
+    transform: rotate(-5deg);
+    z-index: -1;
+    transition: .1s ease;
+    opacity: 0.45;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:hover:before {
+    transform: rotate(-4deg);
+  }
+}
+
+  .Pokemon-title {
+    display: block;
+
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.045rem;
+    color: white;
+    z-index: 9;
+  }
+
+  .Pokemon-description {
+    display: block;
+    font-size: 13px;
+    line-height: 1.45;
+    text-align: justify;
+    color: rgba(255, 255, 255, 0.47);
+  }
+
+  .Pokemon-counter {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    font-family: 'Lisa Terminal';
+    font-size: 30px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.22);
+    z-index: 9;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

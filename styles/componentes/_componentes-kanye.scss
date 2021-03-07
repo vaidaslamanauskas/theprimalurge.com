@@ -1,0 +1,312 @@
+.Kanye {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  padding-right: 12px;
+  padding-left: 12px;
+
+  min-width: 290px;
+  max-width: 100%;
+  overflow: hidden;
+
+  background: white;
+  border: 1px solid black;
+  box-shadow: 3px 3px 0 rgba(255, 255, 255, 1);
+
+  &:hover .Kanye-body,
+  &:hover .Kanye-footerAuthorImage {
+    filter: none;
+  }
+}
+
+  .Kanye-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    width: 100%;
+  }
+
+    .Kanye-headerVerse {
+      max-width: 70%;
+    }
+
+      .Kanye-headerTitle {
+        font-size: 14px;
+        line-height: 1;
+        letter-spacing: 0.025vw;
+        color: rgba(0, 0, 0, 0.87);
+      }
+
+      .Kanye-headerTime {
+        font-size: 12px;
+        line-height: 1;
+        color: rgba(0, 0, 0, 0.54);
+      }
+
+    .Kanye-headerAction {
+      position: absolute;
+      display: block;
+      right: 0;
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: -50%;
+        right: 60%;
+
+        width: 100px;
+        height: 170%;
+
+        background:
+          linear-gradient(to right,
+            rgba(255, 255, 255, .15),
+            rgba(255, 255, 255, 1) 75%)
+        ;
+        pointer-events: none;
+        z-index: 9;
+      }
+    }
+
+      .Kanye-headerActionLink {
+        position: relative;
+        display: block;
+
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-right: 10px;
+        padding-left: 10px;
+
+        font-size: 13px;
+        line-height: 1;
+        letter-spacing: 0.025vw;
+        text-transform: uppercase;
+        color: black;
+
+        background-color: white;
+        outline: 1em solid transparent;
+        border: 1px solid black;
+        box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+        transition: outline .45s ease;
+        z-index: 99;
+
+        &:before {
+          content: '';
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          //background: url(../images/pattern--5.png);
+          //opacity: 0.2;
+
+          /*background-image:
+            repeating-linear-gradient(
+            to bottom,
+            white,
+            white 1px,
+            rgba(0, 0, 0, 1) 1px,
+            rgba(0, 0, 0, 1) 2px
+          );*/
+          background: url(../images/pattern--2.png);
+          opacity: 0.2;
+          z-index: -1;
+        }
+
+        svg {
+          display: inline-block;
+          width: 17px;
+          height: 17px;
+          margin-left: 6px;
+          margin-bottom: -5px;
+          fill: lighten(black, 25%);
+        }
+
+        &:focus {
+          outline: 2px solid lime;
+          outline-offset: 0;
+          animation: press .015s .015s both;
+        }
+
+        &:hover svg {
+          fill: #fff;
+        }
+
+        &:hover {
+          color: white;
+          background: black;
+          text-decoration: none;
+        }
+      }
+
+      @keyframes press {
+        0% {
+          transform: translate(0px, 0px);
+        }
+
+        100% {
+          transform: translate(1px, 1px);
+          box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+        }
+      }
+
+  .Kanye-body {
+    position: relative;
+    width: 100%;
+    border: 1px solid black;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+
+    filter: contrast(1) grayscale(1) brightness(1);
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../images/pattern--5.png);
+      opacity: 0.1;
+    }
+  }
+
+  .Kanye-footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    width: 100%;
+
+    /*background-image:
+      repeating-linear-gradient(
+        to bottom,
+        white,
+        white 2px,
+        black 2px,
+        black 4px
+      );*/
+  }
+
+    .Kanye-footerAuthor {
+      display: flex;
+      align-items: flex-start;
+
+      padding-top: 12px;
+      padding-bottom: 12px;
+
+      width: 100%;
+
+      background-image:
+        repeating-linear-gradient(
+          to bottom,
+          white,
+          white 1px,
+          rgba(0, 0, 0, .16) 1px,
+          rgba(0, 0, 0, .16) 2px
+        );
+    }
+
+      .Kanye-footerAuthorImage {
+        position: relative;
+        display: block;
+        margin-right: 12px;
+        width: 44px;
+        height: 44px;
+        background-color: black;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+
+        filter: contrast(1.15) grayscale(1) brightness(1);
+      }
+
+      .Kanye-footerAuthorProfile {
+        flex: 1;
+      }
+
+        .Kanye-footerAuthorProfileName {
+          font-size: 13px;
+          line-height: 1.125;
+          letter-spacing: 0.025vw;
+          text-transform: uppercase;
+          color: rgba(0, 0, 0, .87);
+        }
+
+        .Kanye-footerAuthorProfileBio {
+          margin-top: 2px;
+
+          font-size: 12px;
+          line-height: 1.125;
+          color: rgba(0, 0, 0, .72);
+        }
+
+  .Kanye-labels {
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 6px;
+
+    width: 100%;
+
+    /*background-image:
+      repeating-linear-gradient(
+        to bottom,
+        white,
+        white 1px,
+        rgba(0, 0, 0, .23) 1px,
+        rgba(0, 0, 0, .23) 2px
+      );*/
+  }
+
+    .Kanye-label {
+      font-size: 12px;
+      line-height: 1;
+      color: rgba(0, 0, 0, 0.57);
+
+      &:first-child {
+        color: rgba(0, 0, 0, 0.67);
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

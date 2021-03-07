@@ -1,0 +1,99 @@
+.Aviato {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-top: 22.2222vh;
+
+  padding-right: 4.25%;
+  padding-left: 4.25%;
+
+  width: 100%;
+  overflow: hidden;
+
+  @media (max-width: 800px) {
+    display: block;
+  }
+}
+
+  .Aviato-investor {
+    position: relative;
+    display: block;
+    flex: 1;
+
+    > .Kanye {
+      min-width: 100%!important;
+    }
+  }
+
+  .Aviato-investorMid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+    .Aviato-investorBighead {
+      display: block;
+
+      font-size: 12px;
+      letter-spacing: 0.025vw;
+      color: rgba(255, 255, 255, 0.87);
+
+      > svg {
+        display: inline-block;
+        width: 20px;
+        vertical-align: middle;
+        opacity: 0.38;
+      }
+    }
+
+    .Aviato-investorBighead {
+
+      @media (max-width: 800px) {
+
+        svg {
+          transform: rotate(90deg);
+        }
+
+      }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

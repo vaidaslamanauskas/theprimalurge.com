@@ -1,0 +1,88 @@
+.NotFound {
+  position: relative;
+  display: block;
+
+  width: 100%;
+  height: 100vh;
+
+  background: url(/images/404.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: contrast(1.25) grayscale(1) brightness(0.95);
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/pattern--5.png);
+    opacity: 0.25;
+  }
+}
+
+  .NotFound-vincent {
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+
+    margin: 5%;
+    padding: 6.6666vmin;
+
+    max-width: 400px;
+
+    background: black;
+    border: 1px solid white;
+    box-shadow: 3px 3px 0 rgba(255, 255, 255, 1);
+
+    z-index: 99;
+  }
+
+    .NotFound-vincentVega {
+      display: block;
+      margin-bottom: 24px;
+
+      font-family: 'Lisa Terminal';
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: 0.125vw;
+      color: rgba(255, 255, 255, .92);
+    }
+
+    .NotFound-vincentHitman {
+      font-size: 13px;
+      text-align: justify;
+      letter-spacing: 0.025vw;
+      color: rgba(255, 255, 255, .87);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

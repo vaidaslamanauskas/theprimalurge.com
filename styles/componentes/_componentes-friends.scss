@@ -1,0 +1,27 @@
+.Friends {
+  margin-top: 48px;
+
+  width: 100%;
+}
+
+  .Friends-cast {
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.0275vw;
+    color: rgba(255, 255, 255, .77);
+
+    > span {
+      color: rgba(255, 255, 255, .57);
+    }
+
+    > a {
+      color: rgba(255, 255, 255, .77);
+      border-bottom: 1px solid rgba(255, 255, 255, .42);
+
+      &:focus,
+      &:hover {
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, .67);
+      }
+    }
+  }

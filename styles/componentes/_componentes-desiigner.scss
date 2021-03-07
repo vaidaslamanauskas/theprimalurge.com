@@ -1,0 +1,450 @@
+.OlympicGames {
+  list-style: none;
+  position: relative;
+  display: block;
+
+  width: 100%;
+}
+
+  .OlympicGames-item {
+    list-style: none;
+    margin-bottom: 4.4444vmin;
+  }
+
+  /* This is a fucking mess, bot oh well */
+  .OlympicGames-item {
+
+    &:first-child .OlympicGames-participant {
+      padding-top: 5.5555vh;
+      padding-bottom: 5.5555vh;
+
+      color: white;
+
+      background-image: url(../images/svg/coin--gold.svg);
+      background-color: #fefe3b;
+      background-size: 24px;
+
+      border: 1px solid #fefe3b;
+      box-shadow: 3px 3px 0 #adad00;
+
+      filter: contrast(1) grayscale(0.25) brightness(1);
+
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background:
+        linear-gradient(
+          rgba(0, 0, 0, .47),
+          rgba(0, 0, 0, 1)
+        );
+        z-index: -1; // Safari fix, I think
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background: url(../images/pattern--5.png);
+        opacity: 0.14;
+      }
+
+      &:focus,
+      &:hover {}
+
+      .OlympicGames-participantPositionNumber {
+        color: white;
+      }
+    }
+
+    &:first-child .OlympicGames-participant .OlympicGames-participantPositionNumber {
+      font-size: 22px;
+
+      @media (min-width: 480px) {
+        font-size: 24px;
+      }
+
+      @media (min-width: 700px) {
+        font-size: 30px;
+      }
+    }
+
+    &:first-child .OlympicGames-participant .OlympicGames-participantName {
+      font-size: 13px;
+
+      @media (min-width: 480px) {
+        font-size: 14px;
+      }
+
+      @media (min-width: 700px) {
+        font-size: 16px;
+      }
+    }
+
+    &:first-child .OlympicGames-participant .OlympicGames-participantTrainer {
+      font-size: 13px;
+
+      @media (min-width: 480px) {
+        font-size: 14px;
+      }
+
+      @media (min-width: 700px) {
+        font-size: 16px;
+      }
+    }
+
+    &:nth-child(2) .OlympicGames-participant {
+      padding-top: 4.4444vh;
+      padding-bottom: 4.4444vh;
+
+      color: white;
+
+      background-image: url(../images/svg/coin--silver.svg);
+      background-color: #d3d3d3;
+      background-size: 24px;
+
+      border: 1px solid #d3d3d3;
+      box-shadow: 3px 3px 0 #696969;
+
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background:
+        linear-gradient(
+          rgba(0, 0, 0, .47),
+          rgba(0, 0, 0, 1)
+        );
+        z-index: -1;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background: url(../images/pattern--5.png);
+        opacity: 0.14;
+      }
+
+      &:focus,
+      &:hover {}
+
+      .OlympicGames-participantPositionNumber {
+        color: white;
+      }
+    }
+
+    &:nth-child(2) .OlympicGames-participant .OlympicGames-participantPositionNumber {
+      font-size: 22px;
+
+      @media (min-width: 480px) {
+        font-size: 24px;
+      }
+
+      @media (min-width: 700px) {
+        font-size: 30px;
+      }
+    }
+
+    &:nth-child(2) .OlympicGames-participant .OlympicGames-participantName {
+      font-size: 13px;
+
+      @media (min-width: 480px) {
+        font-size: 14px;
+      }
+
+      @media (min-width: 700px) {
+        font-size: 16px;
+      }
+    }
+
+    &:nth-child(2) .OlympicGames-participant .OlympicGames-participantTrainer {
+      font-size: 13px;
+
+      @media (min-width: 480px) {
+        font-size: 14px;
+      }
+
+      @media (min-width: 700px) {
+        font-size: 16px;
+      }
+    }
+
+    &:nth-child(3) .OlympicGames-participant {
+      padding-top: 3.3333vh;
+      padding-bottom: 3.3333vh;
+
+      color: white;
+
+      background-image: url(../images/svg/coin--bronze.svg);
+      background-color: #d99d61;
+      background-size: 24px;
+
+      border: 1px solid #d99d61;
+      box-shadow: 3px 3px 0 #9e6226;
+
+      filter: contrast(1) grayscale(0.25) brightness(1);
+
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background:
+        linear-gradient(
+          rgba(0, 0, 0, .47),
+          rgba(0, 0, 0, 1)
+        );
+        z-index: -1;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background: url(../images/pattern--5.png);
+        opacity: 0.14;
+      }
+
+      &:focus,
+      &:hover {}
+
+      .OlympicGames-participantPositionNumber {
+        color: white;
+      }
+    }
+
+    &:nth-child(3) .OlympicGames-participant .OlympicGames-participantPositionNumber {
+      font-size: 22px;
+
+      @media (min-width: 480px) {
+        font-size: 24px;
+      }
+
+      @media (min-width: 700px) {
+        font-size: 30px;
+      }
+    }
+
+    &:nth-child(3) .OlympicGames-participant .OlympicGames-participantName {
+      font-size: 13px;
+
+      @media (min-width: 480px) {
+        font-size: 14px;
+      }
+
+      @media (min-width: 700px) {
+        font-size: 16px;
+      }
+    }
+
+    &:nth-child(3) .OlympicGames-participant .OlympicGames-participantTrainer {
+      font-size: 13px;
+
+      @media (min-width: 480px) {
+        font-size: 14px;
+      }
+
+      @media (min-width: 700px) {
+        font-size: 16px;
+      }
+    }
+
+  }
+
+  .OlympicGames-item {
+
+    &:nth-child(3) {
+
+      &:after {
+        content: '';
+        position: relative;
+        display: block;
+
+        margin-top: 14.4444vh;
+
+        width: 100%;
+      }
+
+    }
+
+  }
+
+  .OlympicGames-participant {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 2.2222vh;
+    padding-bottom: 2.2222vh;
+    padding-right: 6.6666vw;
+    padding-left: 6.6666vw;
+
+    color: black;
+    background: white;
+    border: 1px solid black;
+    box-shadow: 3px 3px 0 rgba(255, 255, 255, 1);
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background: url(../images/pattern--5.png);
+      opacity: 0.12;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+    .OlympicGames-participantPosition {
+      display: block;
+      margin-right: 6.6666vw;
+      z-index: 9;
+    }
+
+      .OlympicGames-participantPositionNumber {
+        font-size: 22px;
+        line-height: 1;
+        letter-spacing: -0.045vw;
+        color: black;
+
+        @media (min-width: 480px) {
+          font-size: 24px;
+        }
+
+        @media (min-width: 700px) {
+          font-size: 28px;
+        }
+
+        span {
+          font-family: 'Lisa Terminal';
+        }
+      }
+
+    .OlympicGames-participantName {
+      display: block;
+
+      font-size: 12px;
+      line-height: 1.15;
+      text-transform: uppercase;
+
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      z-index: 9;
+
+      @media (min-width: 480px) {
+        font-size: 13px;
+      }
+
+      @media (min-width: 700px) {
+        font-size: 15px;
+      }
+
+      time {
+        display: block;
+
+        font-size: 80%;
+        letter-spacing: 0.025vw;
+        text-transform: none;
+        opacity: 0.57;
+      }
+    }
+
+    .OlympicGames-participantTrainer {
+      display: block;
+      padding-left: 2.2222vw;
+
+      font-size: 12px;
+      line-height: 1;
+      letter-spacing: 0.025vw;
+      white-space: nowrap;
+      z-index: 9;
+
+      @media (min-width: 480px) {
+        font-size: 13px;
+      }
+
+      @media (min-width: 700px) {
+        font-size: 15px;
+      }
+
+      span {
+        display: block;
+
+        font-size: 80%;
+        letter-spacing: 0.025vw;
+        text-align: right;
+        white-space: nowrap;
+        opacity: 0.57;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

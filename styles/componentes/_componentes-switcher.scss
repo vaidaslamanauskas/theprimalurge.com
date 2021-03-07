@@ -1,0 +1,94 @@
+.Switcher {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 5%;
+
+  width: 120px;
+  height: 60px;
+
+  cursor: pointer;
+  background: black;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+
+  will-change: transform;
+  z-index: 99;
+
+  animation-delay: 1.25s;
+  animation-duration: 0.475s;
+  animation-fill-mode: both;
+  animation-name: slideDown;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
+
+  &:before {
+    content: 'Off';
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+
+    padding-top: 22px;
+
+    width: 60px;
+    height: 100%;
+
+    line-height: 1;
+    text-align: center;
+    color: white;
+    background: rgba(255, 255, 255, .15);
+    transition: all .15s ease;
+  }
+
+  &:after {
+    content: 'Interactivity if off';
+    position: absolute;
+    display: block;
+
+    padding-top: 22px;
+
+    left: 119px;
+    width: 200px;
+    height: 60px;
+
+    font-size: 13px;
+    text-align: center;
+    color: white;
+    background: black;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+
+    pointer-events: none;
+  }
+}
+
+.is-selected .Switcher {
+
+  &:before {
+    content: 'On';
+    left: 58px;
+    background: rgba(255, 255, 255, .44);
+  }
+
+  &:after {
+    content: 'This baby is on!';
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+.OlympicGames {
+  list-style: none;
+  position: relative;
+
+  display: flex;
+  flex-flow: row wrap;
+  margin: -1%;
+
+  background: darkviolet;
+}
+
+  .OlympicGames-item {
+    display: flex;
+    flex: 1 0 222px;
+    justify-content: center;
+    margin: 1%;
+
+    min-width: 0;
+    min-height: 0;
+
+    background: indigo;
+  }
+
+    .OlympicGames-ring {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      width: 222px;
+      height: 222px;
+
+      background: violet;
+      border-radius: 100%;
+
+      &:focus,
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

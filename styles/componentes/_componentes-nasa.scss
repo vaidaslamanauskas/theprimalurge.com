@@ -1,0 +1,39 @@
+.Nasa {
+  position: relative;
+
+  padding: 8%;
+
+  background: black;
+  border: 1px solid white;
+  box-shadow: 3px 3px 0 rgba(255, 255, 255, 1);
+}
+
+.Nasa--narrow {
+  padding: 6%!important;
+}
+
+  .Nasa-title {
+    display: block;
+    margin-bottom: 24px;
+
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.0125rem;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    color: white;
+
+    @media (min-width: 800px) {
+      font-size: 18px;
+    }
+  }
+
+  .Nasa-separator {
+    display: block;
+
+    margin-top: 32px;
+    margin-bottom: 34px;
+
+    width: 100%;
+    border-top: 2px dashed rgba(255, 255, 255, .23);
+  }

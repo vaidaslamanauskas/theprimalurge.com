@@ -1,0 +1,74 @@
+.Wtf {
+  position: relative;
+  display: block;
+  padding: 14px;
+
+  width: 100%;
+
+  background: black;
+  border: 1px solid white;
+  box-shadow: 3px 3px 0 rgba(255, 255, 255, 1);
+
+  @media (min-width: 480px) {
+    padding: 24px;
+  }
+}
+
+  .Wtf-number {
+    display: block;
+    margin-bottom: 12px;
+
+    font-size: 13px;
+    line-height: 1;
+    color: rgba(255, 255, 255, .37);
+
+    &:before {
+      content: '#';
+    }
+  }
+
+  .Wtf-question {
+    display: block;
+    margin-bottom: 12px;
+
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    color: white;
+
+    &:before {
+      content: '[Q] ';
+    }
+  }
+
+  .Wtf-answer {
+    font-size: 13px;
+    text-align: justify;
+    letter-spacing: 0.025vw;
+    color: rgba(255, 255, 255, 0.57);
+
+    &:before {
+      content: '[A] ';
+    }
+
+    > a {
+      color: inherit;
+      border-bottom: 1px solid rgba(255, 255, 255, .42);
+
+      &:hover {
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, .87);
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+

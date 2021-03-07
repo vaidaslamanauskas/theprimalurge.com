@@ -1,0 +1,115 @@
+---
+layout: default
+---
+
+<main class="Main" role="main">
+
+  <ol id="section:posts" class="Pablo">
+
+    <!-- JR block -->
+    {% if page.url == "/" %}
+    <li class="Pablo-life  Pablo-life--fatAss">
+      <div class="JoeRogan">
+        <div class="JoeRogan-prince">
+          <img src="/images/itismaybenotlogo.svg">
+        </div>
+
+        <div class="JoeRogan-experience">
+          <img src="/images/desiigner--hey.png">
+        </div>
+
+        <div class="JoeRogan-overlay"></div>
+      </div>
+    </li>
+    {% else %}
+    {% endif %}
+
+    {% for post in paginator.posts %}
+
+    <li class="Pablo-life">
+      <section class="Kanye">
+
+        <header class="Kanye-header">
+          <div class="Kanye-headerVerse">
+            <h1 class="Kanye-headerTitle">{{ post.title }}</h1>
+            <time class="Kanye-headerTime" datetime="{{ post.date | date: "%-d %B, %Y" }}">{{ post.date | date: "%-d %B, %Y" }}</time>
+          </div>
+          <div class="Kanye-headerAction">
+            <a href="{{ post.url }}" class="Kanye-headerActionLink">
+              See specimen
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 6V2h-4V0H6v2H2v4H0v12h2v4h4v2h12v-2h4v-4h2V6h-2zM10 4h4v4h-4V4zm6 16H8v-2h2v-6H8v-2h6v8h2v2z"/></svg>
+            </a>
+          </div>
+        </header>
+
+        <div class="Kanye-body">
+          <img src="{{ post.websiteScreen }}" alt="Screenshot">
+        </div>
+
+        <footer class="Kanye-footer">
+          <div class="Kanye-footerAuthor">
+
+            <div class="Kanye-footerAuthorImage" style="background-image: url('{{ post.authorAvatar }}')"></div>
+
+            <div class="Kanye-footerAuthorProfile">
+              <h2 class="Kanye-footerAuthorProfileName">{{ post.authorName }}</h2>
+              <p class="Kanye-footerAuthorProfileBio">{{ post.authorBio | strip_html | truncatewords: 12 }}</p>
+            </div>
+
+          </div>
+        </footer>
+
+        <div class="Kanye-labels">
+          <span class="Kanye-label">Feels:</span>
+          <span class="Kanye-label">{{ post.categories | join: ', ' }}</span>
+        </div>
+
+      </section>
+    </li>
+
+    {% endfor %}
+
+    <!-- Pagination -->
+    <li class="Pablo-life  Pablo-life--regular">
+      <div class="Bboy">
+
+        <nav class="Pagination">
+          {% if paginator.previous_page %}
+          <a class="Pagination-link  Pagination-link--newer" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 14v2h2v2h2v2h2v2h2v2h2v-2h2v-2h-2v-2h-2v-2h-2v-2h-2v-4h2V8h2V6h2V4h2V2h-2V0h-2v2h-2v2h-2v2H8v2H6v2H4v4z"/></svg>
+            Newer posts
+          </a>
+          {% else %}
+          <span></span>
+          {% endif %}
+
+          {% if paginator.next_page %}
+          <a class="Pagination-link  Pagination-link--older" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+            Older posts
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M18 10V8h-2V6h-2V4h-2V2h-2V0H8v2H6v2h2v2h2v2h2v2h2v4h-2v2h-2v2H8v2H6v2h2v2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-4z"/></svg>
+          </a>
+          {% else %}
+          {% endif %}
+        </nav>
+
+        <div class="Bboy-overlay"></div>
+      </div>
+    </li>
+
+  </ol>
+
+
+
+  {% include drawer.html %}
+</main>
+
+
+
+
+
+
+
+
+
+
+

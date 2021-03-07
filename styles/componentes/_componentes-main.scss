@@ -1,0 +1,77 @@
+.Main {
+  padding-top: 24px;
+
+  padding-right: 1.75%;
+  padding-left: 1.75%;
+
+  min-height: 100%;
+  overflow: hidden;
+
+  @media (min-width: 480px) {
+    padding-top: 128px;
+  }
+
+  @media (min-width: 800px) {
+    padding-top: 128px;
+  }
+
+  @media (min-width: 1360px) {
+    padding-top: 128px;
+    padding-right: calc(1.75% + 256px);
+  }
+}
+
+.Main--full {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+  padding-left: 0;
+
+  min-height: 100%;
+
+  @media (min-width: 719.99px) {
+    padding-top: 64px;
+  }
+
+  @media (min-width: 1360px) {
+    padding-right: 256px;
+  }
+}
+
+.Main--null {
+  padding: 0!important;
+  min-height: 100%;
+}
+
+.Main-notice {
+  position: relative;
+  display: block;
+
+  margin-top: 12.2222vh;
+  margin-bottom: 12.2222vh;
+
+  width: 100%;
+
+  text-align: center;
+}
+
+  .Main-noticeMessage {
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.025vw;
+    color: rgba(255, 255, 255, .9);
+
+    > a {
+      color: inherit;
+    }
+  }
+
+
+
+
+
+
+
+
+
+

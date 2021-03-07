@@ -1,0 +1,68 @@
+.Button {
+  display: block;
+  cursor: pointer;
+
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    animation: link 0.15s ease 0.05s both;
+  }
+}
+
+.ShareButton {
+  display: inline-block;
+  cursor: pointer;
+
+  width: 2.75em;
+  height: 2.75em;
+
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 10px;
+  box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.2);
+
+  &--twitter {
+    background-color: #00aced;
+    background-image: url(/images/svg/twitter.svg);
+    background-size: 70%;
+  }
+
+  &--facebook {
+    background-image: url(/images/svg/facebook.svg);
+    background-size: 100%;
+  }
+
+  &--google {
+    background-color: #dc4e41;
+    background-image: url(/images/svg/google.svg);
+    background-size: 80%;
+  }
+
+  &:hover {
+    animation: link 0.15s ease 0.05s both;
+  }
+}
+
+@keyframes link {
+
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  100% {
+    transform: translate(0px ,3px);
+    box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.2);
+  }
+
+}

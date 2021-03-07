@@ -1,0 +1,23 @@
+.Marvel {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+  .Marvel-thor {
+    display: block;
+
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: .025rem;
+    color: white;
+  }
+
+  .Marvel-blackWidow {
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 0.025vw;
+    text-align: justify;
+    color: rgba(255, 255, 255, .42);
+  }

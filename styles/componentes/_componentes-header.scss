@@ -1,0 +1,185 @@
+.Header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+  background: black;
+  border-bottom: 2px solid white;
+
+  will-change: transform;
+  z-index: 999;
+
+  @media (min-width: 300px) {
+    padding-right: 1.75%;
+    padding-left: 1.75%;
+  }
+
+  @media (min-width: 480px) {
+    position: fixed;
+    top: 0;
+  }
+
+  @media (min-width: 1360px) {
+    padding-right: calc(1.75% + 256px);
+  }
+}
+
+  .Header-logo {
+    position: relative;
+    display: block;
+    width: 100%;
+
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-right: 12px;
+    padding-left: 12px;
+
+    font-family: Georgia;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 0.825;
+    letter-spacing: -0.045vw;
+    text-transform: lowercase;
+    text-align: left;
+    color: black;
+    background: white;
+
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+
+    transition: transform .15s ease;
+
+    @media (min-width: 480px) {
+      position: absolute;
+      top: 0;
+
+      padding-top: 48px;
+      padding-bottom: 24px;
+      padding-right: 24px;
+      padding-left: 24px;
+
+      width: auto;
+      font-size: 16px;
+      color: black;
+
+      background: white;
+    }
+
+    &:focus,
+    &:hover {
+      background-image:
+        linear-gradient(
+        -215deg,
+        #e74445 16.11%,
+
+        #000 16.11%,
+        #000 17.22%,
+
+        #f39b29 17.22%,
+        #f39b29 38.33%,
+
+        #000 38.33%,
+        #000 39.44%,
+
+        #eedc47 39.44%,
+        #eedc47 60.55%,
+
+        #000 60.55%,
+        #000 61.66%,
+
+        #c3d67b 61.66%,
+        #c3d67b 82.77%,
+
+        #000 82.77%,
+        #000 83.88%,
+
+        #0f90c1 83.88%,
+        #0f90c1
+      );
+
+      transform: translateY(-4px);
+      text-decoration: none;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../images/pattern--5.png);
+      opacity: 0.12;
+    }
+  }
+
+    .Header-logo--open {}
+
+    .Header-logo--closed {
+      padding-top: 14px;
+      padding-bottom: 12px;
+      height: 100%;
+      font-size: 15px;
+      border: none;
+
+      &:hover {
+        transform: translateX(-2px);
+        text-decoration: none;
+      }
+    }
+
+  .Header-triggered {
+    position: absolute;
+    display: none;
+    right: 0;
+    bottom: 0;
+
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 12px;
+    padding-left: 12px;
+
+    width: auto;
+
+    cursor: pointer;
+    vertical-align: middle;
+
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.025vw;
+    color: rgba(0, 0, 0, .87);
+
+    background: white;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .Header-triggered.is-triggered {
+    transform: translateX(-256px);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

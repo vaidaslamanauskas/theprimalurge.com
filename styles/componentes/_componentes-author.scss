@@ -1,0 +1,179 @@
+.Author {
+  position: relative;
+  display: flex;
+
+  @media (max-width: 380px) {
+    flex-direction: column;
+  }
+}
+
+  .Author-image {
+    position: relative;
+    display: block;
+    margin-right: 12px;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
+    filter: contrast(1.15) grayscale(1) brightness(1);
+
+    @media (max-width: 380px) {
+      margin-bottom: 12px;
+    }
+
+    &:hover {
+      filter: none;
+    }
+  }
+
+  .Author-details {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1;
+  }
+
+    .Author-detailsName {
+      font-size: 14px;
+      line-height: normal;
+      letter-spacing: 0.025rem;
+      color: white;
+    }
+
+    .Author-detailsBio {
+      max-width: 100%;
+      font-size: 12px;
+      line-height: 1.5;
+      letter-spacing: 0.025rem;
+      color: rgba(255, 255, 255, 0.87);
+
+      @media (min-width: 1000px) {
+        max-width: 75%;
+      }
+
+      > a {
+        border-bottom: 1px solid rgba(255, 255, 255, .42);
+        color: inherit;
+
+        &:hover {
+          text-decoration: none;
+          border-bottom: 1px solid rgba(255, 255, 255, .87);
+        }
+      }
+    }
+
+    .Author-detailsExternal {
+      margin-top: 14px;
+    }
+
+      .Author-detailsExternalLink {
+        display: inline-block;
+        margin-right: 12px;
+
+        padding-bottom: 2px;
+
+        font-size: 13px;
+        line-height: normal;
+        letter-spacing: 0.025vw;
+
+        color: white;
+
+        border-bottom: 1px solid;
+
+        &:focus,
+        &:hover {
+          text-decoration: none;
+          transform: translateY(-2px);
+        }
+
+        &:hover:after {
+          opacity: 0.75;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:after {
+          content: '';
+          position: relative;
+          display: inline-block;
+          left: 2px;
+          bottom: 2px;
+
+          width: 11px;
+          height: 11px;
+          background: url(../images/svg/icon-external--white.svg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          opacity: 0.35;
+        }
+      }
+
+      .Author-detailsExternalLink {
+
+        &--twitter {
+          border-color: #1da1f2;
+        }
+
+        &--github {
+          border-color: #4183c4;
+        }
+
+        &--google {
+          border-color: #dd4b39;
+        }
+
+        &--codepen {
+          border-color: #708090;
+        }
+
+        &--facebook {
+          border-color: #3b5998;
+        }
+
+        &--dribbble {
+          border-color: #ea4c89;
+        }
+
+        &--medium {
+          border-color: #00ab6b;
+        }
+
+        &--instagram {
+          border-color: #e1306c;
+        }
+
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

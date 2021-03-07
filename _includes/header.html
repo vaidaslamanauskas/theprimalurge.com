@@ -1,0 +1,17 @@
+<header class="Header" role="banner">
+
+  <a href="/" class="Header-logo  {% if page.path contains '_posts' %}Header-logo--closed{% else %}Header-logo--open{% endif %}">The<br>Primal<br>Urge</a>
+
+  <nav class="Navigation" role="navigation">
+    <div class="Navigation-mobileIndicator">Menu</div>
+    <a href="https://goo.gl/forms/kQx4V6b9qQh4923u2" target="_blank" rel="noopener" class="Navigation-link">Submit<span> Your Site</span></a>
+    <a href="/olympicgames" class="Navigation-link">Olympic games</a>
+    <a href="/categories" class="Navigation-link">Categories</a>
+    <a href="/wtf" class="Navigation-link">Wtf?</a>
+  </nav>
+
+  {% comment %}
+  <button class="Header-triggered">Triggered</button>
+  {% endcomment %}
+
+</header>

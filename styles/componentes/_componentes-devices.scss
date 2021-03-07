@@ -1,0 +1,193 @@
+.DeviceContainer {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 70vh;
+  overflow: hidden;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+
+  @media (min-width: 719.99px) {
+    min-height: 75vh;
+  }
+
+  @media (max-width: 719.99px) {
+    display: none;
+  }
+}
+
+  .Device-overlay {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2ZmZiI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPC9zdmc+);
+    transition: transform .25s ease;
+    transform: translateY(100%);
+    opacity: 0.13;
+
+    will-change: transform;
+    z-index: 9;
+  }
+
+  .is-notInteractive .Device-overlay {
+    transform: translateY(0);
+  }
+
+  .DeviceList {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    max-width: 1400px;
+    width: 100%;
+    height: calc(904px * .5);
+  }
+
+    .DeviceList-window {
+      left: 7.5%;
+      width: 1366px;
+      height: 800px;
+
+      border-color: lighten(black, 20%);
+      border-radius: 0;
+      border-style: solid;
+      border-width: 0 0 10px 0;
+
+      transform-origin: bottom left;
+      @include pixelate(8px, lighten(black, 20%), lighten(black, 20%));
+
+      @media (min-height: 850px) and (min-width: 1440px) {
+        left: 0;
+      }
+
+      &:hover {
+        z-index: 99;
+      }
+    }
+
+    .DeviceList-tablet {
+      right: 12.5%;
+      width: 1024px;
+      height: 768px;
+
+      border-color: lighten(black, 20%);
+      border-radius: 0;
+      border-style: solid;
+      border-width: 2px 34px 6px 34px;
+
+      transform-origin: bottom right;
+      @include pixelate(8px, lighten(black, 20%), lighten(black, 20%));
+
+      &:hover {
+        z-index: 99;
+      }
+    }
+
+    .DeviceList-handset {
+      right: 7.5%;
+      width: 360px;
+      height: 640px;
+
+      border-color: lighten(black, 20%);
+      border-radius: 0;
+      border-style: solid;
+      border-width: 40px 4px 40px 4px;
+
+      transform-origin: bottom right;
+      @include pixelate(8px, lighten(black, 20%), lighten(black, 20%));
+
+      @media (min-height: 850px) and (min-width: 1440px) {
+        right: 0;
+      }
+
+      &:hover {
+        z-index: 99;
+      }
+    }
+
+    .DeviceList-window,
+    .DeviceList-tablet,
+    .DeviceList-handset {
+      box-sizing: initial;
+      position: absolute;
+      display: block;
+      bottom: 0;
+      transform: scale(.18);
+
+      @media (min-width: 600px) {
+        transform: scale(.35);
+      }
+
+      @media (min-width: 1000px) {
+        transform: scale(.5);
+      }
+
+      @media (min-height: 850px) and (min-width: 1440px) {
+        transform: scale(.6);
+      }
+    }
+
+      .DeviceList-frame {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+
+        iframe {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: white;
+          border: none;
+        }
+      }
+
+  .Device-replacement {
+    position: relative;
+    display: block;
+
+    padding-right: 7.5%;
+    padding-left: 7.5%;
+    width: 100%;
+
+    @media (min-width: 719.99px) {
+      display: none;
+    }
+
+    > img {
+      display: block;
+      border-color: lighten(black, 20%);
+      border-radius: 0;
+      border-style: solid;
+      border-width: 5px 0 5px 0;
+
+      @include pixelate(6px, lighten(black, 20%), lighten(black, 20%));
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

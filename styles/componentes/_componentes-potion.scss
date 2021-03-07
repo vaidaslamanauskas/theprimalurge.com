@@ -1,0 +1,136 @@
+.Potion {
+  list-style: none;
+  position: relative;
+  display: block;
+
+  width: 100%;
+}
+
+  .Potion-recipe {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 380px) {
+      flex-direction: column;
+    }
+  }
+
+  .Potion-recipe {
+
+    &:first-child .Potion-recipeGem {
+      background: #cd5241;
+    }
+
+    &:nth-child(2) .Potion-recipeGem {
+      background: #f6bd20;
+    }
+
+    &:nth-child(3) .Potion-recipeGem {
+      background: #5acdbd;
+    }
+
+    &:nth-child(4) .Potion-recipeGem {
+      background: #8bc5cd;
+    }
+
+    &:nth-child(5) .Potion-recipeGem {
+      background: #8383bd;
+    }
+
+  }
+
+    .Potion-recipeGem {
+      position: relative;
+      display: block;
+
+      margin-right: 14px;
+
+      width: 14px;
+      height: 14px;
+
+      @include pixelate(2px, #d7d1b3, white);
+
+      @media (max-width: 380px) {
+        margin-bottom: 14px;
+        width: 12px;
+        height: 12px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/pattern--3.png);
+        opacity: 0.15;
+      }
+    }
+
+    .Potion-recipeDirections {
+      flex: 1;
+    }
+
+      .Potion-recipeDirectionsLabel {
+        margin-bottom: 4px;
+
+        font-size: 13px;
+        line-height: 1;
+        letter-spacing: 0.025rem;
+        text-transform: uppercase;
+        color: white;
+
+        span {
+          letter-spacing: 0.045rem;
+          color: rgba(255, 255, 255, 0.33);
+
+          @media (max-width: 420px) {
+            display: block;
+            margin-top: 2px;
+          }
+        }
+      }
+
+      .Potion-recipeDirectionsDescription {
+        display: block;
+
+        font-size: 12px;
+        line-height: 1.35;
+        letter-spacing: 0.025rem;
+        color: rgba(255, 255, 255, 0.57);
+
+        @media (max-width: 420px) {
+          text-align: justify;
+        }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+
+  {% include head.html %}
+
+  <body {% if page.style %}style="{{ page.style }}"{% endif %}>
+    <a href="#main" class="Skiperooney">Skip to content</a>
+
+  {% include header.html %}
+
+  {{ content }}
+
+  {% include footer.html %}
+
+  <!-- Servicuuu workerrururu -->
+  {% comment %}
+  {% include sw.html %}
+  {% endcomment %}
+
+  <!-- Google spies -->
+  {% comment %}
+  {% include ga.html %}
+  {% endcomment %}
+
+  </body>
+
+</html>

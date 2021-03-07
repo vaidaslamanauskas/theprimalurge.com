@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: http://theprimalurge.com/sitemap.xml
+Disallow:

@@ -1,0 +1,353 @@
+.Pagani {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 100%;
+}
+
+  .Pagani .Pagani-bonnet .Pagani-bonnetEngine {
+
+    &:first-child .Pagani-bonnetEnginePiston {
+      background: #cd5241;
+    }
+
+    &:nth-child(2) .Pagani-bonnetEnginePiston {
+      background: #f6bd20;
+    }
+
+    &:nth-child(3) .Pagani-bonnetEnginePiston {
+      background: #5acdbd;
+    }
+
+    &:nth-child(4) .Pagani-bonnetEnginePiston {
+      background: #8bc5cd;
+    }
+
+    &:nth-child(5) .Pagani-bonnetEnginePiston {
+      background: #8383bd;
+    }
+
+  }
+
+  .Pagani-labels {
+    list-style: none;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+
+    font-size: 12px;
+    letter-spacing: 0.025rem;
+    color: rgba(0, 0, 0, 0.47);
+  }
+
+    .Pagani-labelsItem {
+      position: relative;
+      display: block;
+      left: 7px;
+      width: 34px;
+
+      transform: rotate(-90deg);
+      transform-origin: 0 0;
+    }
+
+  .Pagani-bonnet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 148px;
+  }
+
+    .Pagani-bonnetEngine {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      width: 48px;
+      height: 148px;
+    }
+
+      .Pagani-bonnetEnginePiston {
+        position: relative;
+        display: block;
+
+        width: 14px;
+        height: 14px;
+        overflow: hidden;
+        background: transparent;
+
+        @include pixelate(2px, #d7d1b3, white);
+
+        &:after {
+          content: '';
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: url(../images/pattern--3.png);
+          opacity: 0.15;
+        }
+      }
+
+      /* 5 */
+      .Pagani-bonnetEngine--powerFive {
+
+        .Pagani-bonnetEnginePiston {}
+
+      }
+
+      /* 4.5 */
+      .Pagani-bonnetEngine--powerFourHalf {
+
+        .Pagani-bonnetEnginePiston {
+          &:first-child {
+            background-image:
+              linear-gradient(
+                -225deg,
+                black 0%,
+                black 50%,
+                transparent 50%,
+                transparent 50%,
+                transparent 100%
+              )!important;
+          }
+
+        }
+
+      }
+
+      /* 4 */
+      .Pagani-bonnetEngine--powerFour {
+
+        .Pagani-bonnetEnginePiston {
+
+          &:first-child { background: transparent!important; }
+
+        }
+
+      }
+
+      /* 3.5 */
+      .Pagani-bonnetEngine--powerThreeHalf {
+
+        .Pagani-bonnetEnginePiston {
+
+          &:first-child { background: transparent!important; }
+
+          &:nth-child(2) {
+            background-image:
+              linear-gradient(
+                -225deg,
+                black 0%,
+                black 50%,
+                transparent 50%,
+                transparent 50%,
+                transparent 100%
+              )!important;
+          }
+
+        }
+
+      }
+
+      /* 3 */
+      .Pagani-bonnetEngine--powerThree {
+
+        .Pagani-bonnetEnginePiston {
+
+          &:first-child { background: transparent!important; }
+          &:nth-child(2) { background: transparent!important; }
+
+        }
+
+      }
+
+      /* 2.5 */
+      .Pagani-bonnetEngine--powerTwoHalf {
+
+        .Pagani-bonnetEnginePiston {
+
+          &:first-child { background: transparent!important; }
+          &:nth-child(2) { background: transparent!important; }
+
+          &:nth-child(3) {
+            background-image:
+              linear-gradient(
+                -225deg,
+                black 0%,
+                black 50%,
+                transparent 50%,
+                transparent 50%,
+                transparent 100%
+              )!important;
+          }
+
+        }
+
+      }
+
+      /* 2 */
+      .Pagani-bonnetEngine--powerTwo {
+
+        .Pagani-bonnetEnginePiston {
+
+          &:first-child { background: transparent!important; }
+          &:nth-child(2) { background: transparent!important; }
+          &:nth-child(3) { background: transparent!important; }
+
+        }
+
+      }
+
+      /* 1.5 */
+      .Pagani-bonnetEngine--powerOneHalf {
+
+        .Pagani-bonnetEnginePiston {
+
+          &:first-child { background: transparent!important; }
+          &:nth-child(2) { background: transparent!important; }
+          &:nth-child(3) { background: transparent!important; }
+
+          &:nth-child(4) {
+            background-image:
+              linear-gradient(
+                -225deg,
+                black 0%,
+                black 50%,
+                transparent 50%,
+                transparent 50%,
+                transparent 100%
+              )!important;
+          }
+
+        }
+
+      }
+
+      /* 1 */
+      .Pagani-bonnetEngine--powerOne {
+
+        .Pagani-bonnetEnginePiston {
+
+          &:first-child { background: transparent!important; }
+          &:nth-child(2) { background: transparent!important; }
+          &:nth-child(3) { background: transparent!important; }
+          &:nth-child(4) { background: transparent!important; }
+
+        }
+
+      }
+
+      /* 0.5 */
+      .Pagani-bonnetEngine--powerNullHalf {
+
+        .Pagani-bonnetEnginePiston {
+
+          &:first-child { background: transparent!important; }
+          &:nth-child(2) { background: transparent!important; }
+          &:nth-child(3) { background: transparent!important; }
+          &:nth-child(4) { background: transparent!important; }
+
+          &:nth-child(5) {
+            background-image:
+              linear-gradient(
+                -225deg,
+                black 0%,
+                black 50%,
+                transparent 50%,
+                transparent 50%,
+                transparent 100%
+              )!important;
+          }
+
+        }
+
+      }
+
+      /* 0 */
+      .Pagani-bonnetEngine--powerNull {
+
+        .Pagani-bonnetEnginePiston {
+
+          &:first-child { background: transparent!important; }
+          &:nth-child(2) { background: transparent!important; }
+          &:nth-child(3) { background: transparent!important; }
+          &:nth-child(4) { background: transparent!important; }
+          &:nth-child(5) { background: transparent!important; }
+
+        }
+
+      }
+
+
+
+  .Pagani-dashboard {
+    list-style: none;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 12px;
+    width: 100%;
+
+    @media (max-width: 380px) {
+      display: none;
+    }
+  }
+
+    .Pagani-dashboardDial {
+      display: block;
+      width: 48px;
+      margin-right: 14px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      > svg {
+        display: block;
+        width: 100%;
+        fill: black;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

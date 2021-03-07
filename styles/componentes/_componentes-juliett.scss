@@ -1,0 +1,46 @@
+.Juliett {
+  position: absolute;
+  display: block;
+  left: 4.25%;
+  bottom: 0;
+
+  padding: 2.6666vmin;
+
+  background: black;
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+
+  animation-delay: 1.55s;
+  animation-duration: 0.475s;
+  animation-fill-mode: both;
+  animation-name: slideUp;
+
+  will-change: transform;
+  z-index: 99;
+
+  @media (max-width: 720px) {
+    display: none;
+  }
+}
+
+  .Juliett-message {
+    max-width: 200px;
+
+    font-size: 11px;
+    line-height: 1.25;
+    letter-spacing: 0.025vw;
+    text-align: justify;
+    color: rgba(255, 255, 255, .67);
+  }
+
+@keyframes slideUp {
+  from {
+    transform: translate(0, 100%);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate(0);
+  }
+}

@@ -1,0 +1,39 @@
+.Pablo {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  margin: -2.5%;
+
+  @media (min-width: 700px) {
+    margin: -2%;
+  }
+}
+
+  .Pablo-life {
+    flex: 1 0 300px;
+    margin: 2.5%;
+
+    // This shit supposed to fix something
+    min-width: 0;
+    min-height: 0;
+
+    @media (min-width: 700px) {
+      margin: 2%;
+    }
+  }
+
+.Pablo-life--fatAss {
+  flex-basis: 55%!important;
+
+  @media (min-width: 1000px) {
+    flex-basis: 420px!important;
+  }
+}
+
+.Pablo-life--regular {
+  flex-basis: 55%!important;
+
+  @media (min-width: 1000px) {
+    flex-basis: 300px!important;
+  }
+}

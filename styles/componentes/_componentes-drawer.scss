@@ -1,0 +1,62 @@
+.Drawer {
+  position: fixed;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 128px;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 256px;
+  max-width: 320px;
+
+  overflow-x: hidden;
+
+  background: black;
+  border-left: 2px solid white;
+
+  transition: transform .15s ease;
+  will-change: transform;
+  z-index: 999;
+
+  @media (max-width: 1360px) {
+    display: none;
+    //transform: translateX(100%);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    border-bottom: 2px solid white;
+  }
+}
+
+.Drawer--postView {
+  margin-top: 0!important;
+}
+
+.Drawer.is-triggered {
+  transform: translateX(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

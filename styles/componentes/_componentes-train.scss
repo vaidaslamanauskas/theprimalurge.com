@@ -1,0 +1,282 @@
+.OneTrain {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  padding-right: 20px;
+  padding-left: 20px;
+
+  overflow: hidden;
+
+  transform: will-change;
+  transition: transform .15s ease;
+}
+
+  .OneTrain-driver {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 24px;
+    width: 100%;
+    border-top: 1px solid white;
+
+    > svg {
+      display: block;
+      width: 16px;
+      height: 16px;
+      fill: darken(#fff, 5%);
+    }
+  }
+
+    .OneTrain-driverTitle {
+      margin-top: 14px;
+      margin-bottom: 14px;
+
+      font-size: 13px;
+      letter-spacing: 0.025rem;
+      line-height: 1;
+      color: white;
+    }
+
+  .OneTrain-wagon {
+    position: relative;
+
+    margin-bottom: 12px;
+
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 1400px) {
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: 1600px) {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+
+  .OneTrain-wagon--small {}
+
+  .OneTrain-wagon--hidden {
+    @media (max-height: 800px) {
+      display: none;
+    }
+  }
+
+    .OneTrain-wagonLink {
+      position: relative;
+      display: block;
+      padding-top: 56.25%;
+      text-decoration: none;
+
+      background-color: #f1f1f1;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      cursor: pointer;
+      outline: 1em solid transparent;
+      transition: outline .5s ease;
+      border: 1px solid white;
+
+      filter: contrast(1.15) grayscale(1) brightness(1.1);
+
+      &:hover {
+        filter: none;
+      }
+
+      &:focus {
+        outline: 2px solid lime;
+        outline-offset: 0;
+      }
+
+      &:hover:before {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      &:hover .OneTrain-wagonIndicator {
+        opacity: 0;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 12px;
+        right: 12px;
+
+        width: 17px;
+        height: 17px;
+
+        background-image: url(../images/svg/icon-external--white.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        transform: translateY(10%);
+        opacity: 0;
+        transition: transform .15s ease;
+        z-index: 9;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image:
+          linear-gradient(
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 1));
+      }
+    }
+
+    .OneTrain-wagonLink--small {
+      padding-top: 42.5%!important;
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image:
+          linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 1));
+      }
+    }
+
+      .OneTrain-wagonLinkPattern {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/pattern--4.png);
+        opacity: 0.2;
+      }
+
+    .OneTrain-wagonIndicator {
+      position: absolute;
+      display: block;
+      top: 8px;
+      right: 8px;
+
+      width: 24px;
+      height: 24px;
+
+      background-color: rgba(255, 255, 255, 0.25);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      border-radius: 100%;
+      transition: .25s ease all;
+      z-index: 9;
+    }
+
+    .OneTrain-wagonContent {
+      position: absolute;
+      display: block;
+      left: 0;
+      bottom: 0;
+
+      padding-bottom: 6px;
+      padding-right: 10px;
+      padding-left: 10px;
+
+      width: 100%;
+
+      line-height: 1;
+      pointer-events: none;
+      will-change: transform;
+      z-index: 9;
+    }
+
+      .OneTrain-wagonContentTitle {
+        display: block;
+        font-size: 13px;
+        line-height: 1.25;
+        text-transform: uppercase;
+        letter-spacing: 0.05rem;
+        color: white;
+      }
+
+      .OneTrain-wagonContentTitle--small {
+        font-size: 12px!important;
+      }
+
+      .OneTrain-wagonContentDescription {
+        font-size: 11px;
+        font-weight: normal;
+        letter-spacing: 0.0425rem;
+        color: rgba(255, 255, 255, 0.87);
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,108 @@
+.PiedPiper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+  .PiedPiper-valve {
+    display: block;
+
+    padding-right: 12px;
+    padding-left: 12px;
+
+    font-size: 13px;
+    letter-spacing: 0.025vw;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.87);
+
+    @media (max-width: 500px) {
+      display: none;
+    }
+  }
+
+  .PiedPiper-pipe {
+    position: relative;
+    display: block;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: 0.025vw;
+    text-align: center;
+    color: white;
+
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    outline: 12px solid transparent;
+    transition: outline .25s ease;
+
+    filter: contrast(1.15) grayscale(1) brightness(1);
+
+    @media (min-width: 480px) {
+      padding-right: 24px;
+      padding-left: 24px;
+
+      font-size: 14px;
+    }
+
+    @media (max-width: 480px) {
+      width: 46%;
+    }
+
+    > span {
+
+      @media (max-width: 480px) {
+        display: none;
+      }
+
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../images/pattern--3.png);
+      opacity: 0.15;
+    }
+
+    &:nth-of-type(1) {
+      background: #4fafed;
+    }
+
+    &:nth-of-type(2) {
+      background: #4361b3;
+    }
+
+    &:focus {
+      outline: 2px solid lime;
+      outline-offset: 0;
+    }
+
+    &:hover {
+      text-decoration: none;
+      filter: none;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

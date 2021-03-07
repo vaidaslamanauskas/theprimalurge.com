@@ -1,0 +1,60 @@
+.West {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  margin: 4.25%;
+
+  @media (max-width: 800px) {
+    display: block;
+  }
+}
+
+.West > * + * {
+  @media (max-width: 800px) {
+    margin-top: 4.5vw;
+  }
+}
+
+  .West-major {
+    width: 100%;
+
+    @media (min-width: 800px) {
+      width: 50%;
+    }
+
+    @media (min-width: 1111px) {
+      width: 60%;
+    }
+  }
+
+  .West-major > * + * {
+    margin-top: 4.5vw;
+  }
+
+  .West-minor {
+    width: 100%;
+
+    @media (min-width: 800px) {
+      width: 45%;
+    }
+
+    @media (min-width: 1111px) {
+      width: 35%;
+    }
+  }
+
+  .West-minor > * + * {
+    margin-top: 4.5vw;
+  }
+
+
+
+
+
+
+
+
+
+
+

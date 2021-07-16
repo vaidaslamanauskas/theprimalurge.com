@@ -26,6 +26,9 @@ future: true
 paginate: 10
 permalink:  /:title/
 
+sass:
+  sass_dir: styles
+
 gems:
 - jekyll-paginate
 - jekyll-sitemap

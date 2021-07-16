@@ -1,3 +1,6 @@
+---
+---
+
 @mixin pixelate( $width, $color, $bgcolor ) {
   box-shadow:
     $width 0 $bgcolor,

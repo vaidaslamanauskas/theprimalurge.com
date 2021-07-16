@@ -108,6 +108,28 @@
       }
     }
 
+    &:first-of-type {
+      color: rgba(255, 255, 255, .67);
+      pointer-events: none;
+      cursor: not-allowed;
+
+      &:after {
+        content: 'Closed';
+        position: absolute;
+        display: block;
+        bottom: -10px;
+
+        font-size: 9px;
+        letter-spacing: 0.0625vw;
+        color: rgba(255, 255, 255, .47);
+
+        @media (max-width: 700px) {
+          display: none;
+        }
+      }
+    }
+
+    /*
     &:nth-of-type(2) {
       color: rgba(255, 255, 255, .67);
       pointer-events: none;
@@ -128,28 +150,7 @@
         }
       }
     }
-
-    &:nth-of-type(3) {
-      //color: rgba(255, 255, 255, .67);
-      color: red;
-      pointer-events: none;
-      cursor: not-allowed;
-
-      &:after {
-        content: 'Reworking';
-        position: absolute;
-        display: block;
-        bottom: -10px;
-
-        font-size: 9px;
-        letter-spacing: 0.0625vw;
-        color: rgba(255, 255, 255, .47);
-
-        @media (max-width: 700px) {
-          display: none;
-        }
-      }
-    }
+    */
 
     @media (min-width: 480px) {
       margin-right: 24px;

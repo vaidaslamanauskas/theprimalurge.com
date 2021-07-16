@@ -8,7 +8,20 @@ layout: default
 
     <!-- JR block -->
     {% if page.url == "/" %}
-    <li class="Pablo-life  Pablo-life--fatAss">
+    <li class="Pablo-life  Pablo-life--fatAss" style="position: relative;">
+
+      <!-- dead project -->
+      {% if page.url == "/" %}
+      <div id="dead">
+        <p><em>"...With a Kayne-approved design that deserves an award."</em></p>
+        <span>- Mary Lou</span>
+      </div>
+
+      <div id="rip">
+        <span>2016 - RIP</span>
+      </div>
+      {% endif %}
+
       <div class="JoeRogan">
         <div class="JoeRogan-prince">
           <img src="/images/itismaybenotlogo.svg">

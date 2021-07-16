@@ -8,30 +8,6 @@ title: OLYMPIC GAMES
 
 <main class="Main" role="main">
 
-  {% comment %}
-  <ol class="OlympicGames">
-
-    <li class="OlympicGames-item">
-      <a href="#" class="OlympicGames-ring"></a>
-    </li>
-
-  </ol>
-  {% endcomment %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  {% comment %}
   <ol class="OlympicGames">
     {% assign sorted_posts = site.posts | sort: 'echoLima' | reverse %} <!-- Add name for sorting -->
     {% for post in sorted_posts limit: 15 %} <!-- Reversed to put the ones with higher number on the top -->
@@ -49,14 +25,10 @@ title: OLYMPIC GAMES
     </li>
     {% endfor %}
   </ol>
-  {% endcomment %}
 
-
-  {% comment %}
   <div class="Main-notice">
     <p class="Main-noticeMessage">Work in progress. Things will change.</p>
   </div>
-  {% endcomment %}
 
   {% include drawer.html %}
 </main>

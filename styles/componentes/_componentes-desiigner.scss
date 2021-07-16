@@ -45,7 +45,7 @@
           rgba(0, 0, 0, .47),
           rgba(0, 0, 0, 1)
         );
-        z-index: -1; // Safari fix, I think
+        //z-index: -1; // Safari fix, I think
       }
 
       &:after {
@@ -136,7 +136,7 @@
           rgba(0, 0, 0, .47),
           rgba(0, 0, 0, 1)
         );
-        z-index: -1;
+        //z-index: -1;
       }
 
       &:after {

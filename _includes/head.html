@@ -5,7 +5,7 @@
   <title>{% if page.title %}{{ page.title }} &#45; {% endif %}{{ site.title }}</title>
   <meta name="description" content="No bullshit. Solid websites. Word.">
 
-  <link rel="stylesheet" type="text/css" href="/styles/estilo.css">
+  <link rel="stylesheet" type="text/css" href="styles/estilo.css">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@theprimalurge">
@@ -26,5 +26,5 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="mask-icon" sizes="any" href="/safari-pinned-tab.svg" color="#e5e5e5">
 
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <meta name="robots" content="noindex">
 </head>
